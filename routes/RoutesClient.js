@@ -15,10 +15,10 @@ router.get('/', clientController.showClients);
 router.get('/:id', clientController.findClient);
 
 // Aquí se define una ruta para manejar las solicitudes PUT a la ruta '/:id', ejecutando la función modifyClient() del controlador, la cual permite actualizar completamente un recurso (en este caso un cliente) en la base de datos usando su ID.
-//router.put('/:id', clientController.modifyClient);
+router.put('/:id', clientController.modifyClient);
 
 // Aquí se define una ruta para manejar las solicitudes PATCH a la ruta '/:id', ejecutando la función editClient() del controlador, la cual permite modificar parcialmente los datos de un cliente específico en la base de datos usando su ID.
-router.patch('/:id', clientController.editClient);
+//router.patch('/:id', clientController.editClient);
 
 // Aquí se define una ruta para manejar las solicitudes DELETE a la ruta '/:id' ejecutando la función deleteClient() del controlador, que se encarga de eliminar un cliente específico de la base de datos usando el ID proporcionado.
 router.delete('/:id', clientController.deleteClient);
